@@ -42,7 +42,6 @@ function App() {
   }
 
   function rollDice () {
-
       const audio = new Audio('roll.mp3')
       audio.volume = 0.5
       audio.play()
