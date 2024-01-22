@@ -87,6 +87,9 @@ function App() {
         } else if (bestTime === time) {
           setTimeCompare(0)
         }
+        const audio = new Audio('tada.mp3')
+        audio.volume = 0.3 
+        audio.play()
      } 
   }, [dice])
 
@@ -108,10 +111,10 @@ function App() {
             <div className='information'>
               { !tenzies && <p className='instructions'>Roll until all dice are the same. Click a die to freeze it.</p> }
               { tenzies && <p className='youWin'>You Win!</p>}
-              { tenzies && scoreCompare === 1 && <p className="bestscore">You set a new best score of {rollCount} rolls!</p>}
-              { tenzies && scoreCompare === 0 && <p className="bestscore">You tied the best score of {rollCount} rolls!</p>}
-              { tenzies && timeCompare === 1 && <p className="bestscore">You set a new best time of {time / 100} seconds!</p>}
-              { tenzies && timeCompare === 0 && <p className="bestscore">You tied the best time of {time / 100} seconds!</p>}
+              { tenzies && scoreCompare === 1 && <p className="bestscore">New best score of {rollCount} rolls!</p>}
+              { tenzies && scoreCompare === 0 && <p className="bestscore">Best score of {rollCount} rolls!</p>}
+              { tenzies && timeCompare === 1 && <p className="bestscore">New best time of {time / 100} seconds!</p>}
+              { tenzies && timeCompare === 0 && <p className="bestscore">Best time of {time / 100} seconds!</p>}
             </div>
             <div className='diceContainer'>
               {diceElements}
