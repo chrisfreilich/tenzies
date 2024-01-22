@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 function Die(props) {
 
   return (
@@ -9,6 +7,7 @@ function Die(props) {
           <img src={`${props.value}.svg`} />
        </div>
   )
+  
 }
 
 export default Die
